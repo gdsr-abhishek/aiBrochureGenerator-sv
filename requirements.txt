@@ -1,5 +1,7 @@
 openai
 playwright
-anthropic
-google-generativeai
+# anthropic - commenting since using open ai in this usecase
+# google-generativeai - commenting since using open ai in this usecase
 python-dotenv
+asyncio
+gradio
