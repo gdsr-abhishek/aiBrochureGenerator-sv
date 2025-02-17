@@ -5,14 +5,15 @@ from  openai import OpenAI
 from dotenv import load_dotenv
 import gradio as gr
 
+
 async def scrape_content(url_to_scrape):
     async with async_playwright() as p:
         browser = await p.chromium.launch()
         page = await browser.new_page()
         await page.goto(url_to_scrape)
-        content = await page.content()  # Scrape the entire HTML content of the page
+        content = await page.content() 
         await browser.close()
-        print(content)
+        # print(content)
         return content
 
 app = gr.Interface(
