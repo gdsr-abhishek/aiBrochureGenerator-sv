@@ -5,6 +5,10 @@ from  openai import OpenAI
 from dotenv import load_dotenv
 import gradio as gr
 
+def create_brochure(url_to_scrape):
+    result=''
+
+    return result
 
 async def scrape_content(url_to_scrape):
     async with async_playwright() as p:
@@ -20,6 +24,7 @@ app = gr.Interface(
     fn=scrape_content,
     inputs=["text"],
     outputs=gr.Textbox(),
+    theme="gradio/monochrome"
 )
 
 app.launch()
