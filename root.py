@@ -25,6 +25,10 @@ def create_brochure(url_to_scrape):
             {text} \n \n \
                 {links} \n \n"
 
+def capture_links(links):
+    return "captured links"
+def create_brochure():
+    return 'brochure text'
 def scrape_content(url_to_scrape):
     response = requests.get(url_to_scrape).content
     return response
