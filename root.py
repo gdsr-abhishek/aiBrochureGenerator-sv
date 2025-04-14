@@ -5,6 +5,7 @@ from  openai import OpenAI
 from dotenv import load_dotenv
 import gradio as gr
 from bs4 import BeautifulSoup
+from langchain_openai import ChatOpenAI
 
 def create_brochure(url_to_scrape):
     result= scrape_content(url_to_scrape)
@@ -25,7 +26,7 @@ def create_brochure(url_to_scrape):
             {text} \n \n \
                 {links} \n \n"
 
-def capture_links(links):
+def capture_link_data(links):
     return "captured links"
 def create_brochure():
     return 'brochure text'
